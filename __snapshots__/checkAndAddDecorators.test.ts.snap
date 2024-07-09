@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`checkAndAddDecorators > should not add decorators if they already exist 1`] = `
+"
+import { Response, ErrorResponse } from 'some-library';
+
+class TestController {
+  @SomeDecorator()
+  @Response<ErrorResponse>(401, "Unauthorized")
+  @Response<ErrorResponse>(403, "Forbidden")
+  public testMethod() {
+    // Method implementation
+  }
+}
+    "
+`;
